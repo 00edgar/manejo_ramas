@@ -20,3 +20,12 @@ def actualizar_producto(productos):
             print("Producto actualizado exitosamente.")
             return
     print("Producto no encontrado.")
+
+    def eliminar_producto(productos):
+        nombre = input("Ingrese el nombre del producto a eliminar: ")
+        for producto in productos:
+            if producto["nombre"] == nombre:
+                productos.remove(producto)
+                print("Producto eliminado exitosamente.")
+                return
+        print("Producto no encontrado.")
